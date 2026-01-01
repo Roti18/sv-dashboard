@@ -1,38 +1,47 @@
-# sv
+# SV Dashboard - Boilerplate
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Proyek ini adalah sebuah templat (boilerplate) untuk membangun antarmuka dasbor yang modern dan responsif menggunakan SvelteKit. Dibuat untuk mempercepat proses pengembangan dengan menyediakan komponen UI yang siap pakai, tata letak standar, dan konfigurasi proyek yang optimal.
 
-## Creating a project
+**Status:** Proyek ini masih dalam tahap pengembangan awal.
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Fitur Utama
 
-# create a new project in my-app
-npx sv create my-app
-```
+- **Framework Modern:** Dibangun di atas **SvelteKit**, memberikan performa tinggi dan pengalaman pengembangan yang menyenangkan.
+- **Peralatan Cepat:** Menggunakan **Vite** untuk *build tool*, memastikan *hot-reloading* yang instan dan proses *build* yang cepat.
+- **Type Safety:** Ditulis sepenuhnya menggunakan **TypeScript** untuk kode yang lebih andal dan mudah dikelola.
+- **Koleksi Komponen UI:** Dilengkapi dengan berbagai komponen siap pakai di dalam `src/lib/components` dan `src/lib/ui`, seperti:
+  - `Card`: Untuk menampilkan konten dalam blok terstruktur.
+  - `Button`, `Input`, `Select`, `Textarea`: Elemen formulir interaktif.
+  - `Sidebar`, `Topbar`, `DashboardLayout`: Komponen tata letak utama untuk dasbor.
+  - `Avatar`, `Badge`, `Tooltip`: Komponen UI tambahan untuk memperkaya tampilan.
+- **Tata Letak Dasbor:** Tata letak dasbor yang responsif sudah tersedia, lengkap dengan *sidebar* dan *topbar*.
+- **Data Mock:** Menyertakan data tiruan (`src/lib/data/mock.ts`) untuk mempermudah pengembangan dan *prototyping* tampilan.
+- **Konfigurasi Modern:** Sudah terkonfigurasi dengan ESLint dan Prettier untuk menjaga konsistensi dan kualitas kode.
 
-## Developing
+## Memulai Proyek
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. **Install Dependensi**
+   Gunakan npm (atau package manager pilihan Anda) untuk menginstal semua dependensi yang dibutuhkan.
+   ```sh
+   npm install
+   ```
 
-```sh
-npm run dev
+2. **Jalankan Server Pengembangan**
+   Perintah ini akan menjalankan aplikasi dalam mode pengembangan dan membukanya di browser.
+   ```sh
+   npm run dev -- --open
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Proses Build
 
-## Building
-
-To create a production version of your app:
+Untuk membuat versi produksi dari aplikasi Anda:
 
 ```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Anda dapat melihat hasil build produksi dengan menjalankan `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+> **Catatan:** Untuk melakukan *deployment*, Anda mungkin perlu menginstal [adapter](https://kit.svelte.dev/docs/adapters) yang sesuai dengan lingkungan target Anda (misalnya Vercel, Netlify, atau Node.js server).
