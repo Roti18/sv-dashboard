@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+	--color-base: var(--sv-base);
+	--color-surface: var(--sv-surface);
+	--color-text: var(--sv-text);
+	--color-muted: var(--sv-muted);
+	--color-border: var(--sv-border);
+	--color-accent: var(--sv-accent);
+}
+
+:root {
+	--sv-font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+[data-theme="light"] {
+	--sv-base-raw: 210, 20%, 98%;
+	--sv-surface-raw: 0, 0%, 100%;
+	--sv-text-raw: 220, 40%, 10%;
+	--sv-muted-raw: 220, 10%, 45%;
+	--sv-border-raw: 220, 20%, 94%;
+	
+	--sv-accent-raw: 220, 100%, 50%;
+	--sv-danger-raw: 0, 84%, 60%;
+	
+	--sv-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--sv-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+[data-theme="dark"] {
+	--sv-base-raw: 0, 0%, 0%;
+	--sv-surface-raw: 0, 0%, 3%;
+	--sv-text-raw: 0, 0%, 100%;
+	--sv-muted-raw: 0, 0%, 63%;
+	--sv-border-raw: 0, 0%, 12%;
+
+	--sv-accent-raw: 212, 100%, 50%;
+	--sv-danger-raw: 0, 100%, 50%;
+
+	--sv-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 1);
+	--sv-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 1), 0 2px 4px -2px rgb(0 0 0 / 1);
+}
+
+:root, [data-theme] {
+	--sv-base: hsl(var(--sv-base-raw));
+	--sv-surface: hsl(var(--sv-surface-raw));
+	--sv-text: hsl(var(--sv-text-raw));
+	--sv-muted: hsl(var(--sv-muted-raw));
+	--sv-border: hsl(var(--sv-border-raw));
+	--sv-accent: hsl(var(--sv-accent-raw));
+	--sv-danger: hsl(var(--sv-danger-raw));
+
+	--sv-accent-hover: hsla(var(--sv-accent-raw), 0.9);
+	--sv-accent-faint: hsla(var(--sv-accent-raw), 0.1);
+	
+	--sv-radius-sm: 4px;
+	--sv-radius-md: 6px;
+	--sv-radius-lg: 8px;
+
+	--sv-transition: 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: var(--sv-font-sans);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
